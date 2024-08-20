@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Dashboard</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/profile.html">Profile</a></li>
+                    <li><a href="/index.html">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <h1>Welcome, User</h1>
+                <div class="user-info">
+                    <img src="/img/user-avatar.png" alt="User Avatar">
+                    <span>User Name</span>
+                </div>
+            </header>
+            <section class="content">
+                <h2>Your Saved Passwords</h2>
+                <button class="add-btn">Add New Entry</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Site</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                            <th>Additional Info</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>example.com</td>
+                            <td>
+                                user@example.com
+                                <button class="copy-btn">Copy</button>
+                            </td>
+                            <td>
+                                ••••••••
+                                <button class="show-btn">Show</button>
+                                <button class="copy-pass-btn">Copy</button>
+                            </td>
+                            <td>Some additional information</td>
+                            <td>
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <!-- Repeat rows as needed -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <!-- Popup Form -->
+    <div id="popup-form" class="popup-form">
+        <div class="form-container">
+            <span class="close-btn">&times;</span>
+            <h3>Add New Entry</h3>
+            <form id="add-entry-form">
+                <label for="site">Site:</label>
+                <input type="text" id="site" name="site" required>
+                
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <label for="additional-info">Additional Info:</label>
+                <input type="text" id="additional-info" name="additional-info">
+
+                <button type="submit">Add Entry</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

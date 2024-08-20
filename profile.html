@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Dashboard</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/dashboard.html" >Home</a></li>
+                <li><a href="/index.html">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <h1>Welcome, User</h1>
+                <div class="user-info">
+                    <img src="/img/user-avatar.png" alt="User Avatar">
+                    <span>User Name</span>
+                </div>
+            </header>
+            <section class="content" id="passwords-section">
+                <!-- Existing Passwords Content -->
+            </section>
+
+            <section class="content" id="profile-section">
+                <h2>Profile Information</h2>
+                <form id="profile-form" style="
+                display: flex;
+                flex-flow: wrap;
+                width: 65%;
+                flex-direction: column;">
+                <Div class="dash-box">
+                  
+                    <input type="text" id="first-name" name="first-name" placeholder="First Name" >  
+                    
+                 
+                    <input type="text" id="last-name" name="last-name" placeholder="Last Name" >
+                </Div>
+                <div class="dash-box">  
+                  
+                    <input type="email" id="email" name="email" placeholder="Email" >
+               
+                   
+                    <input type="text" id="username" name="username" placeholder="Username" readonly>
+                </div>   
+                <Div class="dash-box">
+                   
+                    <input type="password" id="password" name="password" placeholder="Password" >
+                    
+              
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" >
+                
+                </div> 
+                <div style="    display: list-item;
+                align-self: center;">
+                    <button type="button" class="reset-mfa-btn">Reset MFA</button>
+                    <button type="button" class="reset-fingerprint-btn">Reset Fingerprint</button>
+                    <button type="submit">Update Profile</button></div>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
